@@ -5,5 +5,3 @@ def mul(*args):
         n *= i
 
     return n
-
-print(mul(2, 3, 4))
