@@ -1,15 +1,13 @@
-arr = []
-array = [1, [2, 3, 4],
+def recur(arr, ans):
+    for i in arr:    
+        if type(i) is list:
+            recur(i, ans)
+        else:
+            ans.append(i)
+
+array = []
+arr = [1, [2, 3, 4],
          [3, [2, 3]]]
 
-
-def recur(*args):
-    for i in args:    
-        if type(i) is list:
-            recur(*i)
-        else:
-            arr.append(i)
-
-
-recur(*array)
-print(arr)
+recur(arr, array)
+print(array)
